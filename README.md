@@ -1,1 +1,1 @@
-Agent for Plex Media Server
+Agent Kinopoisk for Plex Media Server
