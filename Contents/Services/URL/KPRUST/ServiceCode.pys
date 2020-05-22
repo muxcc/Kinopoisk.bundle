@@ -1,0 +1,41 @@
+import os
+RE_STREAMS = Regex('(?:(#EXT-X-STREAM-INF)):(.*)')
+
+def extract_crumb(crumb):
+    if '=' in crumb:
+        key, value = crumb.split('=')
+        value = value.strip('"')
+    else:
+        key = crumb
+        value = None
+    key = key.lower()
+    return key, value
+
+def MediaObjectsForURL(url):
+    m3u8_master = HTTP.Request(url).content
+    streams = RE_STREAMS.findall(m3u8_master)
+    media = []
+    last_qual = None
+
+    for i, (_, stream) in enumerate(streams):
+        info = dict(map(extract_crumb, stream.split(',')))
+        if 'resolution' in info and 'x' in info['resolution'] and info['resolution'] != last_qual:
+            width, height = info['resolution'].split('x')
+            media.append(
+                MediaObject(
+                    audio_channels=2,
+                    optimized_for_streaming=False,
+                    bitrate=int(info['average-bandwidth'])/1024,
+                    width=width,
+                    height=height,
+                    parts=[PartObject(key=Callback(PlayVideo, url=url, width=width, height=height))]
+                )
+            )
+            last_qual = info['resolution']
+
+    return media
+
+@indirect
+def PlayVideo(url, width, height):
+    link = 'http://127.0.0.1:32400/video/kinopoisk/trailer?url=%s&width=%s&height=%s&X-Plex-Token=%s'
+    return IndirectResponse(VideoClipObject, key=HTTPLiveStreamURL(link % (url, width, height, os.environ['PLEXTOKEN'])))

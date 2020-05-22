@@ -1,0 +1,55 @@
+HTTP_HEADERS = {
+    'X-Requested-With': 'XMLHttpRequest',
+    'Accept': '*/*',
+    'Accept-Encoding':'gzip, deflate, br',
+    'Accept-Language':'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36',
+    'DNT':'1'
+}
+
+def MediaObjectsForURL(link):
+    trailer_data = {}
+    try:
+        trailer_data = JSON.ObjectFromURL(link, headers=HTTP_HEADERS)
+    except:
+        Log('Something wrong with trailer url %s', link)
+        raise Ex.MediaNotAvailable
+
+    if not trailer_data:
+        raise Ex.MediaNotAvailable
+
+
+    return [
+        MediaObject(
+            container=Container.MP4,
+            video_codec=VideoCodec.H264,
+            audio_codec=AudioCodec.AAC,
+            duration=trailer_data['duration-millis'],
+            bitrate=clip['bitrate'],
+            width=clip['width'],
+            height=clip['height'],
+            video_resolution=clip['quality'],
+            parts=[
+                PartObject(key=Callback(PlayVideo, url=link, quality=clip['quality'], bitrate=clip['bitrate']))
+            ],
+        ) for clip in filter(lambda w: w['format'] == 'mp4', trailer_data.get('video-files', {}).get('items', []))
+    ]
+
+@indirect
+def PlayVideo(url, quality, bitrate, **kwargs):
+    trailer_data = JSON.ObjectFromURL(url, headers=HTTP_HEADERS)
+    clip_data = {}
+    clip_filter = []
+    if trailer_data:
+        clip_filter = filter(
+            lambda w: w['format'] == 'mp4' and w['quality'] == quality and w['bitrate'] == bitrate,
+            trailer_data.get('video-files', {}).get('items', [])
+        )
+
+    if clip_filter:
+        clip_data = clip_filter[0]
+
+    if not clip_data:
+        raise Ex.MediaNotAvailable
+
+    return IndirectResponse(VideoClipObject, key=clip_data['get-with-redirect-url'])

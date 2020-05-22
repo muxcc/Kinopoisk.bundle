@@ -1,0 +1,89 @@
+[
+  {
+    "id": "rating_source",
+    "label": "Приоритетный источник рейтингов: ",
+    "type": "enum",
+    "values": ["Кинопоиск", "Rotten Tomatoes", "IMDb", "The Movie Database"],
+    "default": "Rotten Tomatoes"
+  },
+  {
+    "id": "review_source",
+    "label": "Источник рецензий: ",
+    "type": "enum",
+    "values": ["Кинопоиск", "Rotten Tomatoes", "Отключено"],
+    "default": "Кинопоиск"
+  },
+  {
+    "id": "trailer_source",
+    "label": "Источник трейлеров: ",
+    "type": "enum",
+    "values": ["Кинопоиск", "IVA", "Все", "Отключено"],
+    "default": "Кинопоиск"
+  },
+  {
+    "id": "trailer_limit",
+    "label": "Лимит трейлеров",
+    "type": "text",
+    "default": "5"
+  },
+  {
+    "id": "extra_all",
+    "label": "Загржать все видеоматериалы",
+    "type":"bool",
+    "default":"false"
+  },
+  {
+    "id": "actors_eng",
+    "label": "Имена актеров на английском",
+    "type":"bool",
+    "default":"false"
+  },
+  {
+    "id": "poster_priority",
+    "label": "Приоритет постеров",
+    "type": "enum",
+    "values": ["Локализованные", "Без текста", "По качеству"],
+    "default": "Локализованные"
+  },
+  {
+    "id": "poster_limit",
+    "label": "Лимит постеров",
+    "type": "text",
+    "default": "9"
+  },
+  {
+    "id": "collections_id",
+    "label": "Включить отображение коллекций",
+    "type": "bool",
+    "default": "true"
+  },
+  {
+    "id":"update_channel",
+    "label":"Канал обновления",
+    "type": "enum",
+    "values": [
+      "none",
+      "stable",
+      "beta"
+    ],
+    "default": "stable"
+  },
+  {
+    "id": "update_interval",
+    "label": "Интервал проверки обновлений (в минутах)",
+    "type": "text",
+    "default": "60"
+  },
+  {
+    "id":"channel",
+    "label":"Включить канал для плагина",
+    "type":"bool",
+    "default":"true"
+  },
+  {
+    "id":"trace",
+    "label":"Включить подробную отладку",
+    "type":"bool",
+    "default":"false"
+  }
+]
