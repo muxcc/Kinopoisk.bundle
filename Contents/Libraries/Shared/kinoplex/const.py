@@ -53,7 +53,7 @@ config['kinopoisk']['main']['headers'] = lambda: {
     'Upgrade-Insecure-Requests': '1'
 }
 
-config['kinopoisk']['main']['yasearch'] = 'https://suggest-kinopoisk.yandex.net/suggest-kinopoisk?srv=kinopoisk&part=%s&nocookiesupport=yes'
+#config['kinopoisk']['main']['yasearch'] = 'https://suggest-kinopoisk.yandex.net/suggest-kinopoisk?srv=kinopoisk&part=%s&nocookiesupport=yes'
 
 config['kinopoisk']['images'] = 'https://st.kp.yandex.net/images/%s'
 config['kinopoisk']['actor'] = config.kinopoisk.images % 'actor_iphone/iphone360_%s.jpg'

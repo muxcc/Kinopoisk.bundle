@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import os, time, logging, urllib, sentry_sdk, socket
+import os, time, logging, urllib, socket
 
 from sentry_sdk.integrations.logging import LoggingIntegration
 from requests import Session, Response, exceptions
@@ -8,8 +8,6 @@ from requests.structures import CaseInsensitiveDict
 from requests.utils import get_encoding_from_headers
 from requests.cookies import extract_cookies_to_jar
 from requests.packages.urllib3.util.retry import Retry
-
-from sentry_sdk import configure_scope
 
 from kinoplex.const import config, tree
 from kinoplex.agent import KinoPlex
@@ -136,60 +134,6 @@ def requests_http_request(self, url, values=None, headers={}, cacheTime=None, en
     return req
 
 
-def setup_sentry(core, platform, prefs):
-    core.log.debug('sentry install')
-    sentry_logging = LoggingIntegration(
-        level=logging.INFO,        # Capture info and above as breadcrumbs
-        event_level=logging.ERROR  # Send errors as events
-    )
-
-    def before_send(event, hint):
-        if 'exc_info' in hint:
-            exc_type, exc_value, tb = hint['exc_info']
-            if exc_type == socket.error:
-                return None
-
-        if 'location' in event and event.get('location', '').startswith('tornado'):
-            return None
-
-        message = event.get('message') or event.get('logentry', {}).get('message')
-        if message and message.startswith((
-            'Cannot read model from',
-            'Unable to deserialize object at',
-            'Exception when constructing media object',
-            "Exception in thread named '_handle_request'",
-            'Exception in I/O handler for fd %d',
-            'We seem to be missing the hash for media item',
-        )):
-            return None
-
-        core.log.debug('sentry error event = %s, hint = %s', event, hint)
-        return event
-
-    # Если включено автообновление и источник указан как amirotin, то все ошибки отправляем в проект KinoPlex AutoUpdate
-    if prefs['update_channel'] != 'none' and prefs['update_repo'] == "amirotin":
-        dsn = "https://2904103227024e22adb745fc6b56332e@sentry.letsnova.ru/3"
-    # Иначе отправляем в проект KinoPlex Legacy
-    else:
-        dsn = "https://93cb49b9aac14aa181b1cb5210ee6cf1@sentry.letsnova.ru/4"
-
-    sentry_sdk.init(
-        dsn=dsn,
-        integrations=[sentry_logging],
-        environment='develop',
-        before_send=before_send
-    )
-
-    with sentry_sdk.configure_scope() as scope:
-        scope.set_tag('os', platform.OS,)
-        scope.set_tag('plexname', core.get_server_attribute('friendlyName'))
-        scope.set_tag('osversion', platform.OSVersion)
-        scope.set_tag('cpu', platform.CPU)
-        scope.set_tag('serverversion', platform.ServerVersion)
-        scope.set_tag('pluginversion', getVersionInfo(core)[0])
-        scope.user = {'id': platform.MachineIdentifier}
-
-
 def setup_network(core, prefs):
     core.log.debug('requests install')
     core.networking.session = Session()
@@ -240,7 +184,7 @@ def log_trace(self, message, *args):
 def init_class(cls_name, cls_base, gl, version=0):
     g = dict((k, v) for k, v in gl.items() if not k.startswith("_"))
     d = {
-        'name': u'Кинопоиск 2.0',
+        'name': 'KinoPoisk',
         'api': namedtuple('Struct', g.keys())(*g.values()),
         'agent_type': 'movie' if cls_base.__name__ == 'Movies' else 'tv',
         'primary_provider': True,

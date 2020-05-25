@@ -15,7 +15,7 @@ setup_network(Core, Prefs)
 def Start():
     Log('Start function call')
     HTTP.CacheTime = 0 #CACHE_1WEEK
-    HTTP.Headers['User-Agent'] = 'Kino Plex'
+    HTTP.Headers['User-Agent'] = 'Plex Agent'
     if Prefs['update_channel'] != 'none':
         Thread.CreateTimer(int(Prefs['update_interval'] or 1)*60, Updater.auto_update_thread, core=Core, pref=Prefs)
 
