@@ -7,7 +7,7 @@ from func import route, handler, ZipObject
 from kinoplex.utils import getVersionInfo
 
 PREFIX = '/video/kinopoisk'
-ObjectContainer.title1 = 'Kinopoisk'
+ObjectContainer.title1 = 'KinoPlex'
 Plugin.AddViewGroup("FullDetails", viewMode="InfoList", mediaType="items")
 
 ICON = 'icon-default.jpg'
@@ -16,10 +16,10 @@ V,D = getVersionInfo(Core)
 
 DirectoryObject.thumb = R(ICON)
 
-@handler(PREFIX, 'Kinopoisk #%s' % V)
+@handler(PREFIX, 'KinoPlex %s' % V)
 @route(PREFIX)
 def root(**kwargs):
-    title = 'Kinopoisk #%s' % V
+    title = 'KinoPlex %s' % V
     oc = ObjectContainer(title1=title, title2=title, header=title, view_group="FullDetails")
     oc.add(DirectoryObject(key=Callback(info), title=u'Информация о плагине',))
     oc.add(DirectoryObject(key=Callback(advanced), title=u'Расширенные настройки',))
