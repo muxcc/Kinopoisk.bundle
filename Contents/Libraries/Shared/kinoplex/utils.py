@@ -9,6 +9,8 @@ from requests.utils import get_encoding_from_headers
 from requests.cookies import extract_cookies_to_jar
 from requests.packages.urllib3.util.retry import Retry
 
+from sentry_sdk import configure_scope
+
 from kinoplex.const import config, tree
 from kinoplex.agent import KinoPlex
 from kinoplex.meta import prepare_meta
