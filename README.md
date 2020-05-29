@@ -1,1 +1,1 @@
-Agent Kinopoisk for Plex Media Server
+Metadata Agent for Plex Media Server
