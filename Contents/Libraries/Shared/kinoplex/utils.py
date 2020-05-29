@@ -186,7 +186,7 @@ def log_trace(self, message, *args):
 def init_class(cls_name, cls_base, gl, version=0):
     g = dict((k, v) for k, v in gl.items() if not k.startswith("_"))
     d = {
-        'name': 'KinoPlex',
+        'name': 'Kino Plex',
         'api': namedtuple('Struct', g.keys())(*g.values()),
         'agent_type': 'movie' if cls_base.__name__ == 'Movies' else 'tv',
         'primary_provider': True,
