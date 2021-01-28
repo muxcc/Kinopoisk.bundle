@@ -10,11 +10,13 @@
         <string>Agent</string>
         <key>PlexAgentAttributionText</key>
         <string>
-            Агент методанных для &lt;a href=&quot;https://www.kinopoisk.ru/&quot;&gt;КиноПоиск&lt;/a&gt;.
+            Агент методанных для сайта &nbsp;&lt;a href=&quot;https://www.kinopoisk.ru/&quot;&gt;КиноПоиск&lt;/a&gt;
             &lt;br&gt;
-            Данные защищается &lt;a href=&quot;https://www.yandex.ru/legal/kinopoisk_termsofuse/&quot;&gt;пользовательским соглашением&lt;/a&gt;.
+            Данные защищается &nbsp;&lt;a href=&quot;https://www.yandex.ru/legal/kinopoisk_termsofuse/&quot;&gt;пользовательским соглашением&lt;/a&gt;
             &lt;br&gt;
-			&lt;p style="text-align:right;"&gt;&lt;span style="color:#606060;"&gt;Форк плагина &lt;b&gt;&lt;a href=&quot;https://github.com/slvxstar/Kinopoisk.bundle&quot;&gt;MUXCC&lt;/a&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+            Форк плагина от &nbsp;&lt;a href=&quot;https://github.com/amirotin&quot;&gt;Mirotin Artem&lt;/a&gt;
+            &lt;br&gt;
+            &lt;p style="text-align:right;"&gt;&lt;span style="color:#606060;"&gt;Power by &nbsp;&lt;b&gt;&lt;a href=&quot;https://github.com/slvxstar&quot;&gt;muxcc&lt;/a&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
         </string>
         <key>PlexPluginCodePolicy</key>
         <string>Elevated</string>
