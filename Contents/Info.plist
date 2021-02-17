@@ -10,13 +10,14 @@
         <string>Agent</string>
         <key>PlexAgentAttributionText</key>
         <string>
-            Агент методанных для сайта &nbsp;&lt;a href=&quot;https://www.kinopoisk.ru/&quot;&gt;КиноПоиск&lt;/a&gt;
+            Агент методанных для сайта &nbsp;&lt;a href=&quot;https://www.kinopoisk.ru/&quot;target=&quot;blank&quot;&gt;КиноПоиск&lt;/a&gt;
             &lt;br&gt;
-            Данные защищается &nbsp;&lt;a href=&quot;https://www.yandex.ru/legal/kinopoisk_termsofuse/&quot;&gt;пользовательским соглашением&lt;/a&gt;
+            Данные защищается &nbsp;&lt;a href=&quot;https://www.yandex.ru/legal/kinopoisk_termsofuse/&quot;target=&quot;blank&quot;&gt;пользовательским соглашением&lt;/a&gt;
             &lt;br&gt;
-            Форк плагина от &nbsp;&lt;a href=&quot;https://github.com/amirotin&quot;&gt;Mirotin Artem&lt;/a&gt;
+            Форк плагина от &nbsp;&lt;a href=&quot;https://github.com/amirotin&quot;target=&quot;blank&quot;&gt;Mirotin Artem&lt;/a&gt;
             &lt;br&gt;
-            &lt;p style="text-align:right;"&gt;&lt;span style="color:#606060;"&gt;Power by &nbsp;&lt;b&gt;&lt;a href=&quot;https://github.com/slvxstar&quot;&gt;muxcc&lt;/a&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;
+            &lt;div style=&quot;text-align:right;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt;Power by&lt;/span&gt; &nbsp;&lt;a href=&quot;https://t.me/muxcc&quot;target=&quot;blank&quot;&gt;muxcc&lt;/a&gt;&lt;/div&gt;
+            &lt;div style=&quot;text-align:right;&quot;&gt;&lt;span style=&quot;color:#606060;&quot;&gt;Version&lt;/span&gt; &nbsp;&lt;a href=&quot;https://github.com/muxcc/Kinopoisk.bundle/releases/tag/2.0.5&quot;target=&quot;blank&quot;&gt;2.0.5&lt;/a&gt;&lt;/div&gt;
         </string>
         <key>PlexPluginCodePolicy</key>
         <string>Elevated</string>
