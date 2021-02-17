@@ -1,7 +1,19 @@
 # Plex Metadata Agent
-### This plugin acts as an agent for [Plex Media Server](https://plex.tv) and downloads information about films from the [Кинопоиск](https://www.kinopoisk.ru/) site.
+#### This plugin acts as an agent for [Plex Media Server](https://plex.tv) and downloads information about films from the [Кинопоиск](https://www.kinopoisk.ru/)
 
 ![Plex Metadata Agent](https://c.radikal.ru/c21/2102/ac/5045bb2a1148.png "This plugin acts as an agent for Plex Media Server and downloads information about films from the Кинопоиск site.")
+
+## Features
+#### 1. Loading movie ratings
++ Kinopoisk
++ Rotten Tomatoes
++ IMDb
++ The Movies Database
+#### 2. Sources of film reviews
++ Kinopoisk
++ Rotten Tomatoes
+#### 3. Download movie trailers
+#### 4. Proxy server support (http, sock5)
 
 ## Plugin paths and installation
 Download the ZIP archive [github.com](https://github.com/muxcc/Kinopoisk.bundle/archive/master.zip)
@@ -35,18 +47,6 @@ We copy the issued path, adding at the end `/Library/Plex Media Server`, for exa
 
 ### Synology
 Unpack the downloaded archive into a folder `/volume1/Plex/Library/Application Support/Plex Media Server/Plug-ins`
-
-## Features
-1. Loading movie ratings
-+ Kinopoisk
-+ Rotten Tomatoes
-+ IMDb
-+ The Movies Database
-2. Sources of film reviews
-+ Kinopoisk
-+ Rotten Tomatoes
-3. Download movie trailers
-4. Proxy server support (http, sock5)
 
 ## About
 This is a fork [Kinopoisk.bundle](https://github.com/amirotin/Kinopoisk.bundle) <br />
