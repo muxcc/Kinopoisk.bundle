@@ -23,4 +23,3 @@ def ValidatePrefs():
     Log('ValidatePrefs function call')
 
 KinopoiskMovieAgent = init_class('KinopoiskMovieAgent', Agent.Movies, globals(), 0)
-#KinopoiskShowAgent = init_class('KinopoiskShowAgent', Agent.TV_Shows, globals(), 0)

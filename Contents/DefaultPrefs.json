@@ -64,7 +64,6 @@
     "values": [
       "none",
       "stable",
-      "beta"
     ],
     "default": "stable"
   },
