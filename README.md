@@ -1,7 +1,7 @@
 # Plex Metadata Agent
 #### This plugin acts as an agent for [Plex Media Server](https://plex.tv) and downloads information about films from the [Кинопоиск](https://www.kinopoisk.ru/)
 
-![Plex Metadata Agent](https://github.com/muxcc/AummGit/raw/master/docs/pub/images/kinopoisk.png" This plugin acts as an agent for Plex Media Server and downloads information about films from the Кинопоиск site.")
+![Plex Metadata Agent]("https://github.com/muxcc/AummGit/raw/master/docs/pub/images/kinopoisk.png" This plugin acts as an agent for Plex Media Server and downloads information about films from the Кинопоиск site.")
 
 ## Features
 #### 1. Loading movie ratings
