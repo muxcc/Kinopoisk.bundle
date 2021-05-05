@@ -49,7 +49,7 @@
     "id": "poster_limit",
     "label": "Лимит постеров",
     "type": "text",
-    "default": "6"
+    "default": "15"
   },
   {
     "id": "collections_id",
