@@ -3,10 +3,11 @@
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/muxcc/Kinopoisk.bundle?color=f60&style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
 [![GitHub Release Date](https://img.shields.io/github/release-date/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
-[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/muxcc/Kinopoisk.bundle/latest?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
 [![GitHub last commit](https://img.shields.io/github/last-commit/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/commits/master)
+[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/muxcc/Kinopoisk.bundle/latest?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
 [![GitHub repo size](https://img.shields.io/github/repo-size/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle)
 [![GitHub all releases](https://img.shields.io/github/downloads/muxcc/Kinopoisk.bundle/total?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle)
+![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/muxcc/Kinopoisk.bundle?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/muxcc/Kinopoisk.bundle?style=flat-square)
 [![GitHub](https://img.shields.io/github/license/muxcc/Kinopoisk.bundle?style=flat-square)](https://mit-license.org/)
 
