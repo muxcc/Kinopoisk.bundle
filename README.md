@@ -1,12 +1,14 @@
 # Plex Metadata Agent
 #### This plugin acts as an agent for [Plex Media Server](https://plex.tv) and downloads information about films from the [Кинопоиск](https://www.kinopoisk.ru/)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/muxcc/Kinopoisk.bundle?color=f60&style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/muxcc/Kinopoisk.bundle?style=flat-square)
-![GitHub all releases](https://img.shields.io/github/downloads/muxcc/Kinopoisk.bundle/total?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/muxcc/Kinopoisk.bundle?style=flat-square)
-![GitHub issue custom search](https://img.shields.io/github/issues-search?query=kinopoisk?style=flat-square)
-![GitHub](https://img.shields.io/github/license/muxcc/Kinopoisk.bundle?style=flat-square)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/muxcc/Kinopoisk.bundle?color=f60&style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
+[![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/muxcc/Kinopoisk.bundle/latest?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/releases/latest)
+[![GitHub last commit](https://img.shields.io/github/last-commit/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle/commits/master)
+[![GitHub repo size](https://img.shields.io/github/repo-size/muxcc/Kinopoisk.bundle?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle)
+[![GitHub all releases](https://img.shields.io/github/downloads/muxcc/Kinopoisk.bundle/total?style=flat-square)](https://github.com/muxcc/Kinopoisk.bundle)
+![GitHub top language](https://img.shields.io/github/languages/top/muxcc/Kinopoisk.bundle?style=flat-square)
+[![GitHub](https://img.shields.io/github/license/muxcc/Kinopoisk.bundle?style=flat-square)](https://mit-license.org/)
 
 ![Plex Metadata Agent](https://github.com/muxcc/AummGit/raw/master/docs/pub/images/kinopoisk.png "This plugin acts as an agent for Plex Media Server and downloads information about films from the Кинопоиск site.")
 
